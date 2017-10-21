@@ -12,8 +12,8 @@
     alias rout='traceroute '                                                    # rout:         Traceroute
     alias path='echo -e ${PATH//:/\\n}'                                         # path:         Echo all executable Paths
     alias nets='netstat -ap tcp '                                               # nets:         Active Internet connections, including servers
-    alias pros='/Applications/Shell/proxyStats.sh '                             # pros:         Get network stats
-    alias prox='/Applications/Shell/shaState.sh'                                # prox:         Start secure session
+    alias pros='/Applications/Shell/System/proxyStats.sh '                      # pros:         Get network stats
+    alias prox='/Applications/Shell/System/systemProxy.sh'                      # prox:         Start secure session
 
 #   -------------------------------------------------------------
 #   TERMINAL / COMMON
@@ -69,7 +69,6 @@
     alias apacheLogs="less +F /var/log/apache2/error_log"                       # Apachelogs:           Shows apache error logs
     alias pyServer="python -m SimpleHTTPServer"                                 # pyServer              Python server from current directory tree at http://$HOSTNAME:8000/
     alias phpServer="php -S 127.0.0.1:8080"                                     # phpServer             PHP server from current directory tree at http://$HOSTNAME:8080/
-    alias ses="/Applications/Shell/session.sh"
 
 #   -------------------------------------------------------------
 #   SYSTEMS OPERATIONS & INFORMATION
@@ -83,6 +82,7 @@
     alias internet='system_profiler SPAirPortDataType'                          # internet:             Airport information
     alias flush='sudo /Applications/Shell/Maintenance/flushLogs.sh '            # flush:                Clear System Log Files...
     alias config='/Applications/Shell/System/systemConfig.sh '                  # config:               Mac OS X config
+    alias privacy='sudo /Applications/Shell/System/systemPrivacy.sh '           # config:               Mac OS X config
 
 
 #   -------------------------------------------------------------
@@ -109,6 +109,7 @@
 #   -------------------------------------------------------------
 #   Sandbox
 #   -------------------------------------------------------------
+    alias p='/Applications/Shell/Sandbox/currentProject.sh '
     alias s='/Applications/Shell/Sandbox/searchEngine.sh '
     alias ss='/Applications/Shell/Sandbox/storeSession.sh '
 
