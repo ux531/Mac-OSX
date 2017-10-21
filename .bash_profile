@@ -109,7 +109,6 @@
 #   -------------------------------------------------------------
 #   Sandbox
 #   -------------------------------------------------------------
-    alias p='/Applications/Shell/Sandbox/currentProject.sh '
     alias s='/Applications/Shell/Sandbox/searchEngine.sh '
     alias ss='/Applications/Shell/Sandbox/storeSession.sh '
 
