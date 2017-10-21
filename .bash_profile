@@ -109,6 +109,7 @@
 #   -------------------------------------------------------------
 #   Sandbox
 #   -------------------------------------------------------------
+    alias p='/Applications/Shell/Sandbox/currentProject.sh '
     alias s='/Applications/Shell/Sandbox/searchEngine.sh '
     alias ss='/Applications/Shell/Sandbox/storeSession.sh '
 
@@ -117,11 +118,10 @@
 #   -------------------------------------------------------------
     alias trace='/Applications/Shell/Applications/traceFiles.sh '               # trace:                Trace raster files
     alias pdf='/Applications/Shell/Applications/compressPDF.sh '                # pdf:                  Compress PDF files [imagemagick]
-    alias wf='curl wttr.in/varna'                                               # wf:                   Encrypting and decrypting files
+    alias wf='curl wttr.in/varna'                                               # wf:                   Get Weather Forecast
     alias curr='/Applications/Shell/Applications/currencyConvert.sh '           # curr:                 A realtime currency converter
     alias do='/Applications/Shell/Applications/toDoApp.sh '                     # do:                   Simple ToDo app
     alias geo='/Applications/Shell/Applications/geoLocation.sh '                # goe:                  Geo location info
     alias mov='/Applications/Shell/Applications/movieInfo.sh '                  # mov:                  Get movie info
     alias qr='/Applications/Shell/Applications/qrCode.sh qrify '                # qr:                   Generate QR code from string or URL
-    alias s='/Applications/Shell/Sandbox/searchEngine.sh '                      # s:                    Search / Google
     alias exif='/Applications/Shell/Applications/exifMeta.sh '                  # exif:                 Exif to update meta
