@@ -35,16 +35,21 @@
 #   -------------------------------------------------------------
 #   SYSTEM
 #   -------------------------------------------------------------
-    alias bash="open -a /Applications/Visual\ Studio\ Code.app/ ~/.bash_profile"            # prof:         Preferred bash_profile edit implementation
-    alias re="source ~/.bash_profile"                                                       # re:        Reload bash_profile
+    alias prof="open -a /Applications/Visual\ Studio\ Code.app/ ~/.bash_profile"            # prof:         Preferred bash_profile edit implementation
+    alias re="source ~/.bash_profile"                                                       # re:           Reload bash_profile
     alias mem='sudo purge'                                                                  # mem:          Flush memory
     alias f="open -a /Applications/Visual\ Studio\ Code.app/ $1"
+    alias indexoff='sudo mdutil -a -i off'
+    alias indexon='sudo mdutil -a -i on'
+    alias u='/Applications/Shell//Applications/u.sh'
+    alias cpu='sudo powermetrics --samplers smc |grep -i "CPU temperature"'
 
 #   -------------------------------------------------------------
 #   Sandbox
 #   -------------------------------------------------------------
-    alias update="open /Applications/Backup\ and\ Sync.app"	    		                    # update:       Backup and sync from Google
+    alias update="open /Applications/Backup\ and\ Sync.app"	    		                        # update:               Backup and sync from Google
     alias finish="killall Backup\ and\ Sync"
+    alias drive="open /Applications/Google\ Drive.app"	
   
 
     essl () {
@@ -55,14 +60,11 @@
 	openssl enc -aes-256-gcm -salt -d -a -in "$1" -out "$2"
      }
 
-    not () {
-      find . -maxdepth 1 -type f ! -iname *.$1 -ls -delete ;
-      echo "All files except *.$1 ware removed!" && ls -l
-    }
-
     x () {
        find . -type f -iname *.$1 ;
     }
+    alias spec='open /Applications/Spectacle.app/'
+    alias rand='openssl rand -base64 '$1''
 
 #   -------------------------------------------------------------
 #   INTERNET / COMMON
@@ -88,10 +90,11 @@
     alias software='system_profiler SPSoftwareDataType'                                         # software:             Software information
     alias internet='system_profiler SPAirPortDataType'                                          # internet:             Airport information
     alias flush='sudo /Applications/Shell/Maintenance/flushLogs.sh '                            # flush:                Clear System Log Files...
+    alias §='sudo /Applications/Shell/Maintenance/clean.sh ' 
     alias config='/Applications/Shell/System/systemConfig.sh '                                  # config:               Mac OS X config
     alias privacy='sudo /Applications/Shell/System/systemPrivacy.sh '                           # config:               Mac OS X config
     alias enc='/Applications/Shell//Applications/crypt.sh '
-
+    alias y='/Applications/Shell//Applications/y.sh '
 #   -------------------------------------------------------------
 #   Setting PATH for Python 3.5 / Orginal in .bash_profile.pysave
 #   -------------------------------------------------------------
@@ -132,3 +135,9 @@
     alias mov='/Applications/Shell/Applications/movieInfo.sh '                                  # mov:                  Get movie info
     alias qr='/Applications/Shell/Applications/qrCode.sh qrify '                                # qr:                   Generate QR code from string or URL
     alias exif='/Applications/Shell/Applications/exifMeta.sh '                                  # exif:                 Exif to update meta
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-16.jdk/Contents/Home
+# Setting PATH for Python 3.10
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
+export PATH
